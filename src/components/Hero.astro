@@ -1,0 +1,42 @@
+---
+import '../styles/animated-background.css';
+import { Image } from 'astro:assets';
+import portrait from '../assets/portrait.png';
+---
+
+<section
+  class="max-w-xs sm:max-w-4xl min-h-screen flex flex-col sm:flex-row-reverse gap-4 sm:gap-8 items-center justify-center lg:justify-between m-auto"
+>
+  <div class="animated-background w-72 sm:w-full mt-6 sm:mt-0 basis-5/12">
+    <Image
+      src={portrait}
+      alt="Miguel Téllez's portrait"
+      class="object-scale-down"
+    />
+  </div>
+  <div class="flex flex-col text-center basis-5/12 gap-4 md:gap-6">
+    <h1 class="text-xl md:text-2xl lg:text-3xl">
+      👋🏽 Hi! I'm <span class="block font-bold tracking-widest text-accent"
+        >Miguel Téllez</span
+      >
+    </h1>
+    <p class="lg:text-xl leading-snug lg:leading-normal">
+      I dwell within the realm of Web Development sorcery, crafting intricate
+      React spells 🧙🏼‍♂️
+    </p>
+    <div
+      class="flex flex-wrap items-center justify-center gap-2 md:gap-4 lg:gap-6"
+    >
+      <a
+        href="#projects"
+        class="border lg:border-2 border-transparent bg-primary rounded-full text-white sm:tracking-wide py-1 px-2 lg:py-2 lg:px-4"
+        >See my work</a
+      >
+      <a
+        href="#contact"
+        class="border lg:border-2 border-accent rounded-full sm:tracking-wide py-1 px-2 lg:py-2 lg:px-4"
+        >Contact me</a
+      >
+    </div>
+  </div>
+</section>

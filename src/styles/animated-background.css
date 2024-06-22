@@ -1,0 +1,81 @@
+.animated-background img {
+  aspect-ratio: 3/4;
+}
+
+.animated-background {
+  --size: 5em;
+  --position: calc(var(--size) / 2);
+  --primary-color: #2a8e84cc;
+  --accent-color: #003366cc;
+  --background: white;
+  --time: 12s;
+  --animation: ease;
+
+  background-color: var(--background);
+  background-image: linear-gradient(
+      45deg,
+      var(--primary-color) 25%,
+      transparent 25%
+    ),
+    linear-gradient(-45deg, var(--primary-color) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--accent-color) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--accent-color) 75%);
+  background-size: var(--size) var(--size);
+  background-position: calc(var(--position) * 1) calc(var(--position) * 0),
+    calc(var(--position) * -1) calc(var(--position) * 1),
+    calc(var(--position) * 1) calc(var(--position) * -1),
+    calc(var(--position) * -1) calc(var(--position) * 0);
+  animation: color var(--time) var(--animation) infinite,
+    position var(--time) var(--animation) infinite;
+}
+
+@keyframes position {
+  0% {
+    background-position: calc(var(--position) * 1) calc(var(--position) * 0),
+      calc(var(--position) * -1) calc(var(--position) * 1),
+      calc(var(--position) * 1) calc(var(--position) * -1),
+      calc(var(--position) * -1) calc(var(--position) * 0);
+  }
+  40% {
+    background-position: calc(var(--position) * 1) calc(var(--position) * 4),
+      calc(var(--position) * -1) calc(var(--position) * 5),
+      calc(var(--position) * 1) calc(var(--position) * 3),
+      calc(var(--position) * -1) calc(var(--position) * 4);
+  }
+  50% {
+    background-position: calc(var(--position) * 3) calc(var(--position) * 8),
+      calc(var(--position) * -3) calc(var(--position) * 9),
+      calc(var(--position) * 2) calc(var(--position) * 7),
+      calc(var(--position) * -2) calc(var(--position) * 8);
+  }
+  90% {
+    background-position: calc(var(--position) * 3) calc(var(--position) * 12),
+      calc(var(--position) * -3) calc(var(--position) * 13),
+      calc(var(--position) * 2) calc(var(--position) * 11),
+      calc(var(--position) * -2) calc(var(--position) * 12);
+  }
+  100% {
+    background-position: calc(var(--position) * 5) calc(var(--position) * 16),
+      calc(var(--position) * -5) calc(var(--position) * 17),
+      calc(var(--position) * 5) calc(var(--position) * 15),
+      calc(var(--position) * -5) calc(var(--position) * 16);
+  }
+}
+
+@media screen and (min-width: 728px) {
+  .animated-background {
+    --size: 5.5em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .animated-background {
+    --size: 6em;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .animated-background {
+    animation: none;
+  }
+}
