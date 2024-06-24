@@ -1,0 +1,23 @@
+---
+import '../styles/global.css';
+import Head from '../components/Head.astro';
+import Header from '../components/Header.astro';
+
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <Head />
+  <body class="bg-white text-gray-20">
+    <Header />
+    <main class="px-8 md:px-16 lg:px-32">
+      <slot />
+    </main>
+    <footer
+      class="bg-accent text-sm sm:text-base text-white text-center p-2 md:p-4"
+    >
+      <p>&copy; {year} Miguel Téllez. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
