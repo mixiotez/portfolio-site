@@ -23,3 +23,8 @@
 html {
   font-family: 'Inconsolata', monospace;
 }
+
+.code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #eeeeee;
+}

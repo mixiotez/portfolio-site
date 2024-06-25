@@ -1,0 +1,78 @@
+---
+const technologies = [
+  'Node.js',
+  'Next.js',
+  'Redux',
+  'Jest',
+  'React Testing Library',
+];
+
+const getPunctuation = (index: number, length: number) => {
+  if (index < length - 2) {
+    return ',';
+  } else if (index === length - 2) {
+    return ', and ';
+  }
+};
+---
+
+<section id="about" class="bg-primary-light flex items-center justify-center">
+  <div
+    class="max-w-5xl flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 text-center p-6 sm:px-0 mx-auto"
+  >
+    <h2
+      class="text-xl md:text-2xl lg:text-3xl font-bold text-accent basis-full"
+    >
+      About Me
+    </h2>
+    <div
+      class="basis-5/12 leading-snug lg:leading-normal space-y-4 sm:space-y-8"
+    >
+      <p>
+        I am a Frontend Developer with over 5 years of experience using <span
+          class="code text-sm">React</span
+        > and 4 years using <span class="code text-sm">Typescript</span>. I am
+        skilled in developing web applications using modern technologies such as {
+          technologies.map((framework, index) => (
+            <>
+              <span class="code text-sm">{framework}</span>{getPunctuation(index, technologies.length)}
+            </>
+          ))
+        }.
+      </p>
+      <p>
+        I worked in Customer Service for 3 years, where I developed strong
+        communication and problem-solving skills. During this time, I discovered
+        my passion for coding and decided to pursue it, enrolling in a Full
+        Stack bootcamp and later in a Bachelor's in Computer Science program.
+      </p>
+    </div>
+    <div
+      class="basis-5/12 leading-snug lg:leading-normal space-y-4 sm:space-y-8"
+    >
+      <p>
+        Outside of the coding world, I enjoy the company of my fluffy cats,
+        playing beautiful classical music on the piano, and rocking out to
+        alternative tunes on the guitar <span
+          class="inline-block text-xl sm:text-2xl leading-snug"
+          >💚 🐈 🎶 💚</span
+        >
+      </p>
+      <p>
+        For more information on my experience and education, please visit my
+        <a
+          target="_blank"
+          href="https://linkedin.com/in/m-tellez"
+          class="text-accent underline">LinkedIn profile</a
+        > or download my resume below.
+        <a
+          href="/resume.pdf"
+          download="miguel-tellez-resume"
+          class="block max-w-max bg-primary rounded-full text-white sm:tracking-wide py-2 px-4 mt-4 mx-auto"
+        >
+          Download Resume
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
