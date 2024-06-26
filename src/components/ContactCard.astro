@@ -1,0 +1,42 @@
+---
+const email = 'hello@miguel-tellez.com';
+const gitHub = 'https://github.com/mixiotez';
+const linkedIn = 'https://www.linkedin.com/in/m-tellez/';
+
+import gitHubIcon from '../assets/github.svg?raw';
+import linkedInIcon from '../assets/linkedin.svg?raw';
+import mailIcon from '../assets/mail.svg?raw';
+---
+
+<section
+  id="contact"
+  class="animated-background max-w-6xl flex items-center justify-center mx-auto py-16 lg:py-24 mb-16 lg:mb-24"
+>
+  <div class="bg-white border-4 border-gray-20 rounded-lg shadow-md p-4 sm:p-6">
+    <h2 class="text-xl md:text-2xl font-bold mb-3 md:mb-4">Let's Connect!</h2>
+    <div class="text-accent space-y-4">
+      <p class="flex gap-3 items-center">
+        <svg class="block w-6 h-6 md:w-8 md:h-8" set:html={mailIcon} /><a
+          target="_blank"
+          href={`mailto:${email}`}
+          class="hover:underline"
+        >
+          {email}</a
+        >
+      </p>
+      <p class="flex gap-3 items-center">
+        <svg class="block w-6 h-6 md:w-8 md:h-8" set:html={gitHubIcon} />
+        <a target="_blank" href={gitHub} class="hover:underline"
+          >github.com/mixiotez</a
+        >
+      </p>
+      <p class="flex gap-3 items-center">
+        <svg class="block w-6 h-6 md:w-8 md:h-8" set:html={linkedInIcon} /><a
+          target="_blank"
+          href={linkedIn}
+          class="hover:underline">linkedin.com/in/m-tellez</a
+        >
+      </p>
+    </div>
+  </div>
+</section>
