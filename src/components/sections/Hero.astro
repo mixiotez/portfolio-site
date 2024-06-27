@@ -1,7 +1,7 @@
 ---
-import '../styles/animated-background.css';
+import '../../styles/animated-background.css';
 import { Image } from 'astro:assets';
-import portrait from '../assets/portrait.png';
+import portrait from '../../assets/portrait.png';
 ---
 
 <section
@@ -12,6 +12,7 @@ import portrait from '../assets/portrait.png';
       src={portrait}
       alt="Miguel Téllez's portrait"
       class="object-scale-down"
+      loading="eager"
     />
   </div>
   <div class="flex flex-col text-center basis-5/12 gap-4 md:gap-6">

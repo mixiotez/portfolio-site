@@ -7,9 +7,9 @@ const technologies = [
   'React Testing Library',
 ];
 
-import codeIcon from '../assets/code.svg?raw';
-import certificationIcon from '../assets/certification.svg?raw';
-import downloadIcon from '../assets/download.svg?raw';
+import codeIcon from '../../assets/code.svg?raw';
+import certificationIcon from '../../assets/certification.svg?raw';
+import downloadIcon from '../../assets/download.svg?raw';
 
 const getPunctuation = (index: number, length: number) => {
   if (index < length - 2) {
@@ -42,7 +42,8 @@ const getPunctuation = (index: number, length: number) => {
         in developing web applications using modern technologies such as {
           technologies.map((framework, index) => (
             <>
-              <b class="code text-sm">{framework}</b>{getPunctuation(index, technologies.length)}
+              <b class="code text-sm">{framework}</b>
+              {getPunctuation(index, technologies.length)}
             </>
           ))
         }.
