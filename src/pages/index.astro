@@ -1,16 +1,14 @@
 ---
-
+import PageLayout from '../layouts/PageLayout.astro';
+import ContactCard from '../components/sections/ContactCard.astro';
+import Hero from '../components/sections/Hero.astro';
+import AboutMe from '../components/sections/AboutMe.astro';
+import Projects from '../components/sections/Projects.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<PageLayout>
+  <Hero />
+  <AboutMe />
+  <Projects />
+  <ContactCard />
+</PageLayout>
