@@ -7,6 +7,10 @@ const technologies = [
   'React Testing Library',
 ];
 
+import codeIcon from '../assets/code.svg?raw';
+import certificationIcon from '../assets/certification.svg?raw';
+import downloadIcon from '../assets/download.svg?raw';
+
 const getPunctuation = (index: number, length: number) => {
   if (index < length - 2) {
     return ',';
@@ -16,63 +20,71 @@ const getPunctuation = (index: number, length: number) => {
 };
 ---
 
-<section id="about" class="bg-primary-light flex items-center justify-center">
-  <div
-    class="max-w-5xl flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 text-center p-6 sm:px-0 mx-auto"
+<section
+  id="about"
+  class="max-w-6xl bg-primary-light flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 text-center sm:text-justify p-6 sm:px-0 sm:py-8 lg:py-12 m-auto"
+>
+  <h2
+    class="text-xl md:text-2xl lg:text-3xl font-bold text-accent text-center basis-full"
   >
-    <h2
-      class="text-xl md:text-2xl lg:text-3xl font-bold text-accent basis-full"
-    >
-      About Me
-    </h2>
-    <div
-      class="basis-5/12 leading-snug lg:leading-normal space-y-4 sm:space-y-8"
-    >
+    About Me
+  </h2>
+  <div class="basis-5/12 leading-snug lg:leading-normal space-y-4 sm:space-y-8">
+    <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+      <svg
+        class="block min-w-6 w-6 h-6 md:min-w-8 md:w-8 md:h-8"
+        set:html={codeIcon}
+      />
       <p>
-        I am a Frontend Developer with over 5 years of experience using <span
-          class="code text-sm">React</span
-        > and 4 years using <span class="code text-sm">Typescript</span>. I am
-        skilled in developing web applications using modern technologies such as {
+        I am a Frontend Developer with over 5 years of experience using <b
+          class="code text-sm">React</b
+        > and 4 years using <b class="code text-sm">Typescript</b>. I am skilled
+        in developing web applications using modern technologies such as {
           technologies.map((framework, index) => (
             <>
-              <span class="code text-sm">{framework}</span>{getPunctuation(index, technologies.length)}
+              <b class="code text-sm">{framework}</b>{getPunctuation(index, technologies.length)}
             </>
           ))
         }.
       </p>
-      <p>
-        I worked in Customer Service for 3 years, where I developed strong
-        communication and problem-solving skills. During this time, I discovered
-        my passion for coding and decided to pursue it, enrolling in a Full
-        Stack bootcamp and later in a Bachelor's in Computer Science program.
-      </p>
     </div>
-    <div
-      class="basis-5/12 leading-snug lg:leading-normal space-y-4 sm:space-y-8"
-    >
-      <p>
-        Outside of the coding world, I enjoy the company of my fluffy cats,
-        playing beautiful classical music on the piano, and rocking out to
-        alternative tunes on the guitar <span
-          class="inline-block text-xl sm:text-2xl leading-snug"
-          >💚 🐈 🎶 💚</span
-        >
-      </p>
-      <p>
-        For more information on my experience and education, please visit my
-        <a
-          target="_blank"
-          href="https://linkedin.com/in/m-tellez"
-          class="text-accent underline">LinkedIn profile</a
-        > or download my resume below.
-        <a
-          href="/resume.pdf"
-          download="miguel-tellez-resume"
-          class="block max-w-max bg-primary rounded-full text-white sm:tracking-wide py-2 px-4 mt-4 mx-auto"
-        >
-          Download Resume
-        </a>
-      </p>
-    </div>
+    <p class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+      <svg
+        class="block min-w-6 w-6 h-6 md:min-w-8 md:w-8 md:h-8"
+        set:html={certificationIcon}
+      />
+      I worked in Customer Service for 3 years, where I developed strong communication
+      and problem-solving skills. During this time, I discovered my passion for coding
+      and decided to pursue it, enrolling in a Full Stack bootcamp and later in a
+      Bachelor's in Computer Science program.
+    </p>
+  </div>
+  <div
+    class="basis-5/12 leading-snug lg:leading-normal mt-2 sm:mt-0 space-y-4 sm:space-y-8"
+  >
+    <p>
+      Outside of the coding world, I enjoy the company of my fluffy cats,
+      playing beautiful classical music on the piano, and rocking out to
+      alternative tunes on the guitar. <span
+        class="block sm:inline-block text-xl sm:text-2xl leading-snug text-center"
+        >💚 🐈 🎶 💚</span
+      >
+    </p>
+    <p>
+      For more information on my experience and education, please visit my
+      <a
+        target="_blank"
+        href="https://linkedin.com/in/m-tellez"
+        class="text-accent underline">LinkedIn profile</a
+      > or download my resume below.
+      <a
+        href="/resume.pdf"
+        download="miguel-tellez-resume"
+        class="flex items-center gap-1.5 sm:gap-2 max-w-max bg-primary rounded-full text-white sm:tracking-wide py-2 px-4 mt-4 mx-auto"
+      >
+        <svg class="w-4 h-4 md:w-5 md:h-5" set:html={downloadIcon} />
+        Download Resume
+      </a>
+    </p>
   </div>
 </section>

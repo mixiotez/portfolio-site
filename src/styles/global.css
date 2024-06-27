@@ -26,5 +26,7 @@ html {
 
 .code {
   font-family: 'Courier New', Courier, monospace;
-  background-color: #eeeeee;
+  padding: 0 3px;
+  margin: 0 -3px;
+  background-color: white;
 }
