@@ -1,23 +1,15 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
 
-type AdditionalLink = {
-  url: string;
-  label: string;
-};
-
 interface Props {
-  title: string;
-  description: string;
-  link?: string;
-  additionalLink?: AdditionalLink;
-  technologies: string[];
-  imageUrl: string;
+  project: CollectionEntry<'projects'>['data'];
 }
 
-const { title, description, link, additionalLink, technologies, imageUrl } =
-  Astro.props;
+const {
+  project: { imageUrl, title, technologies, demoUrl, repoUrl, additionalLink },
+} = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/*.{png,gif}'
@@ -32,7 +24,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   />
   <div class="flex flex-col gap-4 lg:gap-6 p-4 lg:p-6">
     <h2 class="text-lg md:text-xl font-bold">{title}</h2>
-    <p class="leading-snug lg:leading-normal">{description}</p>
+    <p class="whitespace-pre-line leading-snug lg:leading-normal"><slot /></p>
     <div class="flex flex-wrap gap-2">
       {
         technologies.map((technology) => (
@@ -42,12 +34,15 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
         ))
       }
     </div>
-    <div class="text-right">
+    <div class="text-sm text-right">
       {
-        link && (
-          <a href={link} class="text-accent underline">Live Demo</a>
+        demoUrl && (
+          <>
+            <a href={demoUrl} class="text-accent underline">Live Demo</a>{' | '}
+          </>
         )
       }
+      <a href={repoUrl} class="text-accent underline">GitHub</a>
       {
         additionalLink && (
           <>
