@@ -1,9 +1,18 @@
+---
+import projects from '../../content/projects';
+import ProjectCard from '../ProjectCard.astro';
+---
+
 <section
   id="projects"
-  class="bg-white min-h-screen flex flex-col items-center justify-center"
+  class="bg-white max-w-6xl flex flex-col items-center p-6 sm:py-8 lg:py-12 mx-auto scroll-mt-12 scroll-mt-14"
 >
-  <div class="max-w-6xl mx-auto p-8">
-    <h2 class="text-3xl font-bold text-accent text-center mb-8">My Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">Projects</div>
+  <h2
+    class="text-xl md:text-2xl lg:text-3xl font-bold text-accent text-center mb-4 lg:mb-8"
+  >
+    My Projects
+  </h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
+    {projects.map((project) => <ProjectCard {...project} />)}
   </div>
 </section>
