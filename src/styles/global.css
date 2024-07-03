@@ -30,3 +30,7 @@ html {
   margin: 0 -3px;
   background-color: white;
 }
+
+.project-image {
+  aspect-ratio: 2/1;
+}

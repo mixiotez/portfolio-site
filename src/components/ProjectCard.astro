@@ -16,25 +16,29 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 ---
 
-<div class="bg-white shadow-md rounded-lg overflow-hidden">
+<div class="bg-white flex flex-col shadow-md rounded-lg overflow-hidden">
   <Image
     src={images[imageUrl]()}
-    alt={title}
-    class="w-full object-scale-down"
+    alt={title + " app's screenshot"}
+    class="project-image w-full object-scale-down"
   />
-  <div class="flex flex-col gap-4 lg:gap-6 p-4 lg:p-6">
-    <h2 class="text-lg md:text-xl font-bold">{title}</h2>
-    <p class="whitespace-pre-line leading-snug lg:leading-normal"><slot /></p>
-    <div class="flex flex-wrap gap-2">
-      {
-        technologies.map((technology) => (
-          <span class="bg-primary text-sm text-white py-1 px-2 md:px-3 rounded-full">
-            {technology}
-          </span>
-        ))
-      }
+  <div class="h-full flex flex-col justify-between gap-4 lg:gap-6 p-4 lg:p-6">
+    <div class="space-y-4 lg:space-y-6">
+      <h2 class="text-lg md:text-xl font-bold border-b pb-1">
+        {title}
+      </h2>
+      <p class="whitespace-pre-line leading-snug lg:leading-normal"><slot /></p>
+      <div class="flex flex-wrap gap-2">
+        {
+          technologies.map((technology) => (
+            <span class="bg-primary text-sm text-white py-1 px-2 md:px-3 rounded-full">
+              {technology}
+            </span>
+          ))
+        }
+      </div>
     </div>
-    <div class="text-sm text-right">
+    <div class="text-right border-t pt-1 sm:pt-2">
       {
         demoUrl && (
           <>

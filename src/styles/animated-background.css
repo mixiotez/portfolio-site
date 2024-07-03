@@ -3,6 +3,7 @@
 }
 
 .animated-background {
+  --fade-duration: 750ms;
   --size: 5em;
   --position: calc(var(--size) / 2);
   --primary-color: #2a8e84cc;
@@ -25,8 +26,17 @@
     calc(var(--position) * -1) calc(var(--position) * 1),
     calc(var(--position) * 1) calc(var(--position) * -1),
     calc(var(--position) * -1) calc(var(--position) * 0);
-  animation: color var(--time) var(--animation) infinite,
+  animation: fadeIn var(--fade-duration) ease-in-out,
     position var(--time) var(--animation) infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes position {
