@@ -1,6 +1,6 @@
 ---
 order: 2
-imageUrl: /src/assets/portfolio.png
+imageUrl: /src/assets/projects/portfolio.png
 title: Portfolio
 technologies:
   - HTML
@@ -11,4 +11,6 @@ technologies:
   - Tailwind
 repoUrl: https://github.com/mixiotez/portfolio-site
 ---
-The website you are currently on! A personal page that provides my contact information and showcases my portfolio projects.
+The website you are currently on.
+
+Scored 100 on every Google Lighthouse category! 🎉

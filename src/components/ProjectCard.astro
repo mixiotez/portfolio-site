@@ -12,13 +12,14 @@ const {
 } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/*.{png,gif}'
+  '/src/assets/projects/*.{png,gif}'
 );
 ---
 
 <div class="bg-white flex flex-col shadow-md rounded-lg overflow-hidden">
   <Image
     src={images[imageUrl]()}
+    widths={[240, 540, 720]}
     alt={title + " app's screenshot"}
     class="project-image w-full object-scale-down"
   />
@@ -41,9 +42,7 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     <div class="text-right border-t pt-1 sm:pt-2">
       {
         demoUrl && (
-          <>
-            <a href={demoUrl} class="text-accent underline">Live Demo</a>{' | '}
-          </>
+          <><a href={demoUrl} class="text-accent underline">Live Demo</a>{' | '}</>
         )
       }
       <a href={repoUrl} class="text-accent underline">GitHub</a>
