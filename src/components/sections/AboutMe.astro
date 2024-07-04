@@ -22,15 +22,17 @@ const getPunctuation = (index: number, length: number) => {
 
 <section
   id="about"
-  class="max-w-6xl bg-primary-light flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 text-center sm:text-justify p-6 sm:px-0 sm:py-8 lg:py-12 mt-4 m-auto scroll-mt-12 scroll-mt-14"
+  class="max-w-6xl bg-primary-light text-center sm:text-justify p-6 sm:py-8 lg:py-12 mt-4 m-auto scroll-mt-12 sm:scroll-mt-14"
 >
   <h2
-    class="text-xl md:text-2xl lg:text-3xl font-bold text-accent text-center basis-full"
+    class="text-xl md:text-2xl lg:text-3xl font-bold text-accent text-center m-auto mb-4 sm:mb-8"
   >
     About Me
   </h2>
-  <div class="basis-5/12 leading-snug lg:leading-normal space-y-4 sm:space-y-8">
-    <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+  <div
+    class="max-w-4xl w-full sm:w-11/12 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 mx-auto"
+  >
+    <div class="order-1 flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
       <svg
         class="block min-w-6 w-6 h-6 md:min-w-8 md:w-8 md:h-8"
         set:html={codeIcon}
@@ -42,14 +44,15 @@ const getPunctuation = (index: number, length: number) => {
         in developing web applications using modern technologies such as {
           technologies.map((framework, index) => (
             <>
-              <b class="code text-sm">{framework}</b>
-              {getPunctuation(index, technologies.length)}
+              <b class="code text-sm">{framework}</b>{getPunctuation(index, technologies.length)}
             </>
           ))
         }.
       </p>
     </div>
-    <p class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">
+    <p
+      class="order-2 sm:order-3 flex flex-col sm:flex-row items-center gap-2 sm:gap-6"
+    >
       <svg
         class="block min-w-6 w-6 h-6 md:min-w-8 md:w-8 md:h-8"
         set:html={certificationIcon}
@@ -59,11 +62,7 @@ const getPunctuation = (index: number, length: number) => {
       and decided to pursue it, enrolling in a Full Stack Web Development bootcamp
       and later in a Bachelor's in Computer Science program.
     </p>
-  </div>
-  <div
-    class="basis-5/12 leading-snug lg:leading-normal mt-2 sm:mt-0 space-y-4 sm:space-y-8"
-  >
-    <p>
+    <p class="order-3 sm:order-2">
       Outside of the coding world, I enjoy the company of my fluffy cats,
       playing beautiful classical music on the piano, and rocking out to
       alternative tunes on the guitar. <span
@@ -71,7 +70,7 @@ const getPunctuation = (index: number, length: number) => {
         >💚 🐈 🎶 💚</span
       >
     </p>
-    <p>
+    <p class="order-4">
       For more information on my experience and education, please visit my
       <a
         target="_blank"
@@ -81,7 +80,7 @@ const getPunctuation = (index: number, length: number) => {
       <a
         href="/resume.pdf"
         download="miguel-tellez-resume"
-        class="scroll-mt-12 flex items-center gap-1.5 sm:gap-2 max-w-max bg-primary rounded-full text-white sm:tracking-wide py-2 px-4 mt-4 mx-auto"
+        class="flex items-center gap-1.5 sm:gap-2 max-w-max bg-primary rounded-full text-white sm:tracking-wide py-2 px-4 mt-4 mx-auto"
       >
         <svg class="w-4 h-4 md:w-5 md:h-5" set:html={downloadIcon} />
         Download Resume
