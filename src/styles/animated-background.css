@@ -1,13 +1,9 @@
-.animated-background img {
-  aspect-ratio: 3/4;
-}
-
 .animated-background {
   --fade-duration: 750ms;
   --size: 5em;
   --position: calc(var(--size) / 2);
-  --primary-color: #2a8e84cc;
-  --accent-color: #003366cc;
+  --primary-color: theme(colors.primary.DEFAULT / 90%);
+  --accent-color: theme(colors.accent / 90%);
   --background: white;
   --time: 12s;
   --animation: ease;

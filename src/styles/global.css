@@ -24,6 +24,10 @@ html {
   font-family: 'Inconsolata', monospace;
 }
 
+.portrait img {
+  aspect-ratio: 3/4;
+}
+
 .code {
   font-family: 'Courier New', Courier, monospace;
   padding: 0 3px;
