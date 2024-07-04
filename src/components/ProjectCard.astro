@@ -25,9 +25,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   />
   <div class="h-full flex flex-col justify-between gap-4 lg:gap-6 p-4 lg:p-6">
     <div class="space-y-4 lg:space-y-6">
-      <h2 class="text-lg md:text-xl font-bold border-b pb-1">
+      <h3 class="text-lg md:text-xl font-bold border-b pb-1">
         {title}
-      </h2>
+      </h3>
       <p class="whitespace-pre-line leading-snug lg:leading-normal"><slot /></p>
       <div class="flex flex-wrap gap-2">
         {
@@ -42,7 +42,9 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
     <div class="text-right border-t pt-1 sm:pt-2">
       {
         demoUrl && (
-          <><a href={demoUrl} class="text-accent underline">Live Demo</a>{' | '}</>
+          <>
+            <a href={demoUrl} class="text-accent underline">Live Demo</a>{' | '}
+          </>
         )
       }
       <a href={repoUrl} class="text-accent underline">GitHub</a>

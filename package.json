@@ -1,7 +1,10 @@
 {
   "name": "portfolio",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "author": "Miguel Téllez",
+  "description": "A website built from scratch with Astro. It displays my contact info and my portfolio projects.",
+  "license": "MIT",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

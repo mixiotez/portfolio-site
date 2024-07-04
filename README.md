@@ -1,47 +1,57 @@
-# Astro Starter Kit: Minimal
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d00ac385-0f55-448a-bfca-ad8cd6fd83c5/deploy-status)](https://app.netlify.com/sites/mixiotez-portfolio/deploys)
 
-```sh
-npm create astro@latest -- --template minimal
+You can access the live site [here](https://miguel-tellez.dev/)
+
+# Personal Portfolio
+
+## Description
+
+A website built from scratch with Astro. It displays my contact info and my portfolio projects.
+
+## Preview
+
+<img width="600" alt="Portfolio screenshot preview" src="src/assets/projects/portfolio.png">
+
+## Installation
+
+```bash
+yarn install && yarn dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+> If you run into problems with `sharp`, please use the following command: `yarn add sharp --ignore-engines`
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-## 🚀 Project Structure
+- 100 score on every Google Lighthouse category
 
-Inside of your Astro project, you'll see the following folders and files:
+  <img height="100" alt="Portfolio preview" src="lighthouse.png">
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- Responsive – Mobile-first approach
+- UI animated with vanilla CSS
+- Typesafe
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Technologies Used
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+- Astro
+- Tailwind CSS
+- Git
+- GitHub
+- Netlify
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Challenges
 
-## 🧞 Commands
+- Astro learning curve – This was my first time building something with it.
+- Issues with yarn and Netlify: I had to change `package.json` several times until I found a fix.
 
-All commands are run from the root of the project, from a terminal:
+## Limitations
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- Updating the content requires changes to the code.
 
-## 👀 Want to learn more?
+## Improvements
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Use a database or a CMS to fetch the website's content.
+- Implement a Dark theme
