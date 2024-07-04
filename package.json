@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "postinstall": "yarn add sharp --ignore-engines"
+    "prebuild": "yarn add sharp --ignore-engines"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
